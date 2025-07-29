@@ -98,6 +98,7 @@ https://templatemo.com/tm-583-festava-live
                             <div class="date-wrap">
                                 <h5 class="text-white">
                                     <i class="custom-icon bi-clock me-2"></i>
+                                    <p class id="currentDate"></p>
                                 </h5>
                             </div>
 
@@ -680,6 +681,20 @@ T e m p l a t e M o
         <script src="js/jquery.sticky.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
-
+        <script>
+            // Get the current date and time
+            const now = new Date();
+            // Format the date as desired (e.g., "MM/DD/YYYY")
+            // You can use toLocaleDateString() for a localized format,
+            // or manually construct the string using methods like getMonth(), getDate(), getFullYear()
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options); // Example: "July 29, 2025"
+            // Get the HTML element by its ID
+            const dateElement = document.getElementById("currentDate");
+            // Insert the formatted date into the HTML element
+            if (dateElement) { // Check if the element exists before manipulating it
+                dateElement.textContent = formattedDate;
+            }
+        </script>
     </body>
 </html>
