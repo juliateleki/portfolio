@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Julia Teleki" />
+    <meta name="author" content="Julia Teleki" />
+
+    <title>Julia Teleki</title>
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/templatemo-festava-live.css" rel="stylesheet" />
+
+    <script>
+      async function loadProjects() {
+        try {
+          const response = await fetch("projects.json");
+          const data = await response.json();
+
+          renderCodingProjects(data.codingProjects);
+          renderArtProjects(data.artProjects);
+        } catch (error) {
+          console.error("Error loading projects.json:", error);
+        }
+      }
+
+      function renderCodingProjects(codingProjects) {
+        const container = document.getElementById("coding-projects");
+        codingProjects.forEach((project) => {
+          container.innerHTML += `
+                    <div class="col-lg-5 col-12">
+                        <div class="artists-thumb">
+                            <img src="${project.img}" class="artists-image img-fluid" alt="${project.name} screenshot">
+                            <div class="artists-hover">
+                                <p><strong>Name:</strong> ${project.name}</p>
+                                <p><strong>Date:</strong> ${project.date}</p>
+                                <p><strong>Type:</strong> ${project.type}</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        });
+      }
+
+      function renderArtProjects(artProjects) {
+        const container = document.getElementById("art-projects");
+        artProjects.forEach((project) => {
+          container.innerHTML += `
+                    <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                        <div class="pricing-thumb">
+                            <h3><small>${project.title}</small></h3>
+                            <p>${project.description}</p>
+                            <a class="link-fx-1 color-contrast-higher mt-4" href="${project.link}">
+                                <span>${project.linkText}</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", loadProjects);
+    </script>
+  </head>
+  <body>
+    <main>
+      <!-- Header -->
+      <header class="site-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex flex-wrap">
+              <p class="d-flex me-4 mb-0">
+                <i class="bi-person custom-icon me-2"></i>
+                <strong class="text-dark">Have a Wonderful Day!</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            >Computer Science & Engineering</a
+          >
+          <a
+            href="JuliaTelekiResume.pdf"
+            class="btn custom-btn d-lg-none ms-auto me-4"
+            >Resume</a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="#section_1">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="#section_2">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="#section_3">Coding</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="#section_4">Art</a>
+              </li>
+            </ul>
+            <a
+              href="JuliaTelekiResume.pdf"
+              class="btn custom-btn d-none d-lg-block"
+              >View Resume</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero-section" id="section_1">
+        <div class="section-overlay"></div>
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="row">
+            <div class="col-12 mt-auto mb-5 text-center">
+              <small>Hi My Name Is</small>
+              <h1 class="text-white mb-5">Julia Teleki</h1>
+              <a class="btn custom-btn smoothscroll" href="#section_2"
+                >Learn More</a
+              >
+            </div>
+
+            <div
+              class="col-12 mt-auto d-flex flex-column flex-lg-row text-center"
+            >
+              <div class="date-wrap">
+                <h5 class="text-white">
+                  <i class="custom-icon bi-clock me-2"></i>
+                  <span id="currentDate"></span>
+                </h5>
+              </div>
+
+              <div class="location-wrap mx-auto py-3 py-lg-0">
+                <h5 class="text-white">
+                  <i class="custom-icon bi-geo-alt me-2"></i>
+                  Texas, United States
+                </h5>
+              </div>
+
+              <div class="social-share">
+                <ul
+                  class="social-icon d-flex align-items-center justify-content-center"
+                >
+                  <span class="text-white me-3">Share:</span>
+                  <li>
+                    <a
+                      href="https://github.com/juliateleki"
+                      class="social-icon-link"
+                      ><span class="bi-github"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/julia-t-9911a6159/"
+                      class="social-icon-link"
+                      ><span class="bi-linkedin"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="mailto:julia@teleki.net" class="social-icon-link"
+                      ><span class="bi-envelope"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/juliatelekitamu"
+                      class="social-icon-link"
+                      ><span class="bi-github"></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-wrap">
+          <video autoplay loop muted class="custom-video">
+            <source src="video/nightsky.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section section-padding" id="section_2">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mb-4 d-flex align-items-center">
+              <div class="services-info">
+                <h2 class="text-white mb-4">Julia Teleki</h2>
+                <p class="text-white">
+                  Hello! I’m Julia and I majored in Computer Science with a
+                  minor in Graphic Design.
+                </p>
+
+                <h4 class="text-white mt-4">Education</h4>
+                <ul class="text-white">
+                  <li>Vista Ridge High School, 2014-2018, GPA: 3.8/4.0</li>
+                  <li>Texas A&M University, 2018-2024, GPA: 3.6/4.0</li>
+                </ul>
+
+                <h4 class="text-white mt-4">Experience</h4>
+                <div class="experience-item">
+                  <h6 class="text-white">ANTISA Supporting Forensic Nurses</h6>
+                  <p class="text-white">
+                    Developed a web app guiding nurses through decision trees
+                    for diagnoses.
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <h6 class="text-white">CRM Insights</h6>
+                  <p class="text-white">
+                    Built a news scraping program with sentiment and exposure
+                    scoring for mutual fund analysis.
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <h6 class="text-white">Enigma</h6>
+                  <p class="text-white">
+                    Created a horror game using Ren’Py with branching
+                    decision-tree storylines.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="about-text-wrap">
+                <h2 class="text-white mb-4">About Me</h2>
+                <p class="text-white">
+                  I have a passion for coding and art. Helping others with these
+                  skills is my main goal.
+                </p>
+                <img
+                  src="images/profile1.png"
+                  class="about-image img-fluid"
+                  alt="Profile picture of Julia Teleki"
+                />
+
+                <div class="about-text-info d-flex">
+                  <i class="about-text-icon bi-person"></i>
+                  <div class="ms-4">
+                    <h3>Julia Teleki</h3>
+                    <p class="mb-0">Computer Science and Art</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coding Section -->
+      <section class="artists-section section-padding" id="section_3">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <h2 class="mb-4">Coding</h2>
+            </div>
+          </div>
+          <div id="coding-projects" class="row justify-content-center"></div>
+        </div>
+      </section>
+
+      <!-- Art Section -->
+      <section
+        class="pricing-section section-padding section-bg"
+        id="section_4"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="mb-4">Art</h2>
+            </div>
+          </div>
+          <div id="art-projects" class="row"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/click-scroll.js"></script>
+    <script src="./js/custom.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.sticky.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
