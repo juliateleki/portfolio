@@ -1,60 +1,62 @@
 {
-    "codingProjects": [
-        {
-            "name": "Forensic Nursing Web App",
-            "date": "Nov 24, 2023",
-            "type": "Web Application Screen",
-            "img": "images/forensicnursingscreen.png"
-        },
-        {
-            "name": "Forensic Nursing Web App",
-            "date": "Nov 24, 2023",
-            "type": "Diagnosis Screen",
-            "img": "images/forensicnursingdiagnosis.png"
-        },
-        {
-            "name": "Forensic Nursing Web App",
-            "date": "Nov 24, 2023",
-            "type": "Decision Tree",
-            "img": "images/forensicnursingdecisontree.png"
-        },
-        {
-            "name": "Enigma",
-            "date": "Apr 24, 2024",
-            "type": "Decision Tree",
-            "img": "images/enigmadecisiontree.png"
-        },
-        {
-            "name": "Enigma",
-            "date": "Apr 24, 2024",
-            "type": "Horror Game",
-            "img": "images/enigma.png"
-        },
-        {
-            "name": "Enigma",
-            "date": "Apr 24, 2024",
-            "type": "Horror Game",
-            "img": "images/enigma2.png"
-        },
-        {
-            "name": "Enigma",
-            "date": "Apr 24, 2024",
-            "type": "Horror Game",
-            "img": "images/enigma3.png"
-        }
-    ],
-    "artProjects": [
-        {
-            "title": "Gesso Magazine",
-            "description": "Arts 403 Final Project: A magazine featuring my favorite artists Doris Salcedo and Jean Michel Basquiat.",
-            "link": "images/teleki_julia_arts403_magazine_spreads.pdf",
-            "linkText": "View Magazine"
-        },
-        {
-            "title": "Acrylic Paintings",
-            "description": "2019-2025 collection featuring fantasy themes, original works, and studies.",
-            "link": "images/Paintings.pdf",
-            "linkText": "View Paintings"
-        }
-    ]
+  "codingProjects": [
+    {
+      "name": "Forensic Nursing Web App",
+      "date": "Nov 24, 2023",
+      "type": "Web Application Screen",
+      "img": "images/forensicnursingscreen.png"
+    },
+    {
+      "name": "Forensic Nursing Web App",
+      "date": "Nov 24, 2023",
+      "type": "Diagnosis Screen",
+      "img": "images/forensicnursingdiagnosis.png"
+    },
+    {
+      "name": "Forensic Nursing Web App",
+      "date": "Nov 24, 2023",
+      "type": "Decision Tree",
+      "img": "images/forensicnursingdecisontree.png"
+    },
+    {
+      "name": "Enigma",
+      "date": "Apr 24, 2024",
+      "type": "Decision Tree",
+      "img": "images/enigmadecisiontree.png"
+    },
+    {
+      "name": "Enigma",
+      "date": "Apr 24, 2024",
+      "type": "Horror Game",
+      "img": "images/enigma.png"
+    },
+    {
+      "name": "Enigma",
+      "date": "Apr 24, 2024",
+      "type": "Horror Game",
+      "img": "images/enigma2.png"
+    },
+    {
+      "name": "Enigma",
+      "date": "Apr 24, 2024",
+      "type": "Horror Game",
+      "img": "images/enigma3.png"
+    }
+  ],
+  "artProjects": [
+    {
+      "title": "Gesso Magazine",
+      "description": "Arts 403 Final Project: A magazine featuring my favorite artists Doris Salcedo and Jean Michel Basquiat.",
+      "link": "images/teleki_julia_arts403_magazine_spreads.pdf",
+      "linkText": "View Magazine",
+      "img": "images/teleki_julia_arts403-mockup1.png"
+    },
+    {
+      "title": "Acrylic Paintings",
+      "description": "2019-2025 collection featuring fantasy themes, original works, and studies.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View Paintings",
+      "img": "images/sunset.jpg"
+    }
+  ]
 }

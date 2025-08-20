@@ -1,0 +1,130 @@
+/* ================================
+   Carousel (stable, no fade)
+   ================================ */
+
+.slideshow-container {
+  position: relative !important;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9; /* adjust to taste (e.g., 4/3, 21/9) */
+  background: #111; /* neutral bg while images load */
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Safari/older fallback if aspect-ratio unsupported */
+@supports not (aspect-ratio: 16/9) {
+  .slideshow-container {
+    height: 562px; /* ~16:9 for 1000px width */
+  }
+}
+
+/* Slides stack on top of each other; JS shows one at a time */
+.slideshow-container .mySlides {
+  position: absolute !important;
+  inset: 0 !important; /* top/right/bottom/left: 0 */
+  display: none; /* the active slide is set to block by JS */
+}
+
+/* Fill the viewport; no distortion */
+.slideshow-container .mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+/* Arrows (namespaced + forced so theme can't override) */
+.slideshow-container .slide-prev,
+.slideshow-container .slide-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  padding: 14px 16px !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  outline: none !important;
+  z-index: 20 !important;
+}
+
+.slideshow-container .slide-prev {
+  left: 8px !important;
+}
+.slideshow-container .slide-next {
+  right: 8px !important;
+}
+
+.slideshow-container .slide-prev:hover,
+.slideshow-container .slide-next:hover {
+  background: rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Slide number badge */
+.slideshow-container .numbertext {
+  position: absolute !important;
+  top: 8px !important;
+  left: 8px !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-radius: 10px !important;
+  z-index: 15 !important;
+}
+
+/* Caption (scoped; avoids conflicts with global .text) */
+.slideshow-container .text {
+  position: absolute !important;
+  left: 8px !important;
+  right: 8px !important;
+  bottom: 8px !important;
+  padding: 10px 14px !important;
+  font-size: 16px !important;
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-radius: 12px !important;
+  z-index: 15 !important;
+}
+
+/* Dots (separate wrappers for coding/art) */
+#coding-dots .dot,
+#art-dots .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#coding-dots .dot.active,
+#art-dots .dot.active,
+#coding-dots .dot:hover,
+#art-dots .dot:hover {
+  background: #717171;
+}
+
+/* No fade animation: remove any previous .fade rules */
+.slideshow-container .fade {
+  /* intentionally empty (no animation) */
+}
+
+/* Mobile arrows slightly smaller */
+@media (max-width: 576px) {
+  .slideshow-container .slide-prev,
+  .slideshow-container .slide-next {
+    padding: 10px 12px !important;
+    font-size: 20px !important;
+  }
+}

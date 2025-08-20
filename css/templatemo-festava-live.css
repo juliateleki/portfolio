@@ -6,48 +6,46 @@ https://templatemo.com/tm-583-festava-live
 
 */
 
-
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #12a0d0;
-  --secondary-color:              #f1c232;
-  --section-bg-color:             #ADD8E6;
-  --custom-btn-bg-color:          #f1c232;
-  --custom-btn-bg-hover-color:    #c01f27;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #7fffd4;
-  --link-hover-color:             #B22727;
+  --white-color: #ffffff;
+  --primary-color: #12a0d0;
+  --secondary-color: #f1c232;
+  --section-bg-color: #add8e6;
+  --custom-btn-bg-color: #f1c232;
+  --custom-btn-bg-hover-color: #c01f27;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #b22727;
 
-  --body-font-family:             'Outfit', sans-serif;
+  --body-font-family: 'Outfit', sans-serif;
 
-  --h1-font-size:                 74px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  18px;
-  --btn-font-size:                14px;
-  --copyright-font-size:          16px;
+  --h1-font-size: 74px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --btn-font-size: 14px;
+  --copyright-font-size: 16px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-bold:             700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  font-family: var(--body-font-family);
 }
-
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -106,7 +104,7 @@ ul li {
   font-weight: var(--font-weight-light);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -145,12 +143,12 @@ strong {
 
 .link-fx-1:hover::before {
   transform: translateX(17px) scaleX(0);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .link-fx-1:hover .icon circle {
   stroke-dashoffset: 200;
-  transition: stroke-dashoffset .2s .1s;
+  transition: stroke-dashoffset 0.2s 0.1s;
 }
 
 .link-fx-1:hover .icon line {
@@ -162,7 +160,7 @@ strong {
 }
 
 .link-fx-1::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -170,7 +168,7 @@ strong {
   height: 1px;
   background-color: currentColor;
   transform-origin: right center;
-  transition: transform .2s .1s;
+  transition: transform 0.2s 0.1s;
 }
 
 .link-fx-1 .icon {
@@ -196,18 +194,17 @@ strong {
 .link-fx-1 .icon circle {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  transition: stroke-dashoffset .2s;
+  transition: stroke-dashoffset 0.2s;
 }
 
 .link-fx-1 .icon line {
-  transition: transform .4s;
+  transition: transform 0.4s;
   transform-origin: 13px 15px;
 }
 
 .link-fx-1 .icon line:last-child {
   transform-origin: 19px 15px;
 }
-
 
 /*---------------------------------------
   SECTION               
@@ -260,26 +257,25 @@ strong {
   margin-right: 15px;
 }
 
-.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active,
-.nav-tabs .nav-link:focus, 
+.nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   color: var(--primary-color);
 }
 
 .nav-tabs h5 {
-  color: var(--p-color); 
+  color: var(--p-color);
   margin-bottom: 0;
 }
 
 .nav-tabs .nav-link.active h5,
-.nav-tabs .nav-link:focus h5, 
+.nav-tabs .nav-link:focus h5,
 .nav-tabs .nav-link:hover h5 {
   color: var(--primary-color);
 }
-
 
 /*---------------------------------------
   CUSTOM ICON COLOR               
@@ -287,7 +283,6 @@ strong {
 .custom-icon {
   color: var(--secondary-color);
 }
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
@@ -327,7 +322,6 @@ strong {
   color: var(--white-color);
 }
 
-
 /*---------------------------------------
   VIDEO              
 -----------------------------------------*/
@@ -344,7 +338,6 @@ strong {
   height: 100%;
 }
 
-
 /*---------------------------------------
   SITE HEADER              
 -----------------------------------------*/
@@ -353,7 +346,6 @@ strong {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-
 
 /*---------------------------------------
   NAVIGATION              
@@ -398,7 +390,7 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--secondary-color);
 }
@@ -418,23 +410,24 @@ strong {
   box-shadow: none;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   background: transparent;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before {
   transform: rotate(45deg);
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:after {
   transform: rotate(-45deg);
 }
 
@@ -451,7 +444,8 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
@@ -468,7 +462,6 @@ strong {
 .navbar-toggler .navbar-toggler-icon::after {
   top: 8px;
 }
-
 
 /*---------------------------------------
   HERO        
@@ -500,7 +493,6 @@ strong {
 .hero-section .container .row {
   height: 100%;
 }
-
 
 /*---------------------------------------
   ABOUT              
@@ -546,7 +538,6 @@ strong {
   padding: 35px;
 }
 
-
 /*---------------------------------------
   TICKET               
 -----------------------------------------*/
@@ -581,7 +572,6 @@ strong {
   width: 100%;
   height: 100%;
 }
-
 
 /*---------------------------------------
   ARTISTS              
@@ -639,7 +629,6 @@ strong {
   margin: 1.5rem 0;
 }
 
-
 /*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
@@ -651,7 +640,7 @@ strong {
   background-size: cover;
 }
 .table-responsive {
-	filter: drop-shadow(2px 2px 4px #606060);
+  filter: drop-shadow(2px 2px 4px #606060);
 }
 
 .schedule-table {
@@ -720,7 +709,6 @@ strong {
   z-index: 2;
 }
 
-
 /*---------------------------------------
   PRICING              
 -----------------------------------------*/
@@ -779,14 +767,12 @@ strong {
   color: var(--link-hover-color);
 }
 
-
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
 .google-map {
   border-radius: var(--border-radius-medium);
 }
-
 
 /*---------------------------------------
   CUSTOM FORM               
@@ -799,7 +785,7 @@ strong {
   outline: none;
 }
 
-.custom-form button[type="submit"] {
+.custom-form button[type='submit'] {
   background: var(--custom-btn-bg-color);
   border: none;
   border-radius: var(--border-radius-large);
@@ -810,12 +796,11 @@ strong {
   margin-bottom: 0;
 }
 
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.custom-form button[type='submit']:hover,
+.custom-form button[type='submit']:focus {
   background: var(--custom-btn-bg-hover-color);
   border-color: transparent;
 }
-
 
 /*---------------------------------------
   SITE FOOTER              
@@ -842,7 +827,7 @@ strong {
 }
 
 .site-footer-title {
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .site-footer-link,
@@ -863,7 +848,6 @@ strong {
 .copyright-text {
   font-size: var(--copyright-font-size);
 }
-
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -902,19 +886,18 @@ strong {
   display: block;
 }
 
-.social-icon-link span:hover::before{
+.social-icon-link span:hover::before {
   animation: spinAround 2s linear infinite;
 }
 
 @keyframes spinAround {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
 }
-
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -948,7 +931,7 @@ strong {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .navbar {
     background-color: var(--dark-color);
   }
@@ -977,7 +960,7 @@ strong {
     padding: 20px;
   }
 
-  .schedule-table tr, 
+  .schedule-table tr,
   .schedule-table td {
     padding: 25px;
   }
@@ -1019,4 +1002,3 @@ strong {
     font-size: 20px;
   }
 }
-
