@@ -1,36 +1,48 @@
+function showCurrentDate() {
+  const today = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const dateElement = document.getElementById('currentDate');
+
+  if (dateElement) {
+    dateElement.textContent = today.toLocaleDateString(undefined, options);
+  } else {
+    console.error("Element with id='currentDate' not found");
+  }
+}
+
 async function loadProjects() {
   try {
-    const response = await fetch("projects.json"); // must be in same folder as index.html
+    const response = await fetch('projects.json');
     const data = await response.json();
 
     renderCodingProjects(data.codingProjects);
     renderArtProjects(data.artProjects);
   } catch (error) {
-    console.error("Error loading projects.json:", error);
+    console.error('Error loading projects.json:', error);
   }
 }
 
 function renderCodingProjects(codingProjects) {
-  const container = document.getElementById("coding-projects");
+  const container = document.getElementById('coding-projects');
   codingProjects.forEach((project) => {
     container.innerHTML += `
-            <div class="col-lg-5 col-12">
-                <div class="artists-thumb">
-                    <img src="${project.img}" class="artists-image img-fluid" alt="${project.name} screenshot">
-                    <div class="artists-hover">
-                        <p><strong>Name:</strong> ${project.name}</p>
-                        <p><strong>Date:</strong> ${project.date}</p>
-                        <p><strong>Type:</strong> ${project.type}</p>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-        `;
+      <div class="col-lg-5 col-12">
+          <div class="artists-thumb">
+              <img src="${project.img}" class="artists-image img-fluid" alt="${project.name} screenshot">
+              <div class="artists-hover">
+                  <p><strong>Name:</strong> ${project.name}</p>
+                  <p><strong>Date:</strong> ${project.date}</p>
+                  <p><strong>Type:</strong> ${project.type}</p>
+                  <hr>
+              </div>
+          </div>
+      </div>
+    `;
   });
 }
 
 function renderArtProjects(artProjects) {
-  const container = document.getElementById("art-projects");
+  const container = document.getElementById('art-projects');
   artProjects.forEach((project) => {
     container.innerHTML += `
             <div class="col-lg-6 col-12 mt-4 mt-lg-0">
@@ -46,4 +58,7 @@ function renderArtProjects(artProjects) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", loadProjects);
+document.addEventListener('DOMContentLoaded', () => {
+  showCurrentDate(); // ✅ sets the hero date
+  loadProjects(); // ✅ loads coding + art
+});
