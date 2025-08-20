@@ -2,6 +2,25 @@
    Carousel (stable, no fade)
    ================================ */
 
+/* Remove bullets + spacing on hero social links */
+.social-icon {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.social-icon li {
+  display: inline-flex; /* keeps items on one line */
+  align-items: center;
+  margin: 0 6px; /* even spacing */
+}
+
+/* Optional: align the "Share:" label better */
+.social-icon .text-white.me-3 {
+  display: inline-flex;
+  align-items: center;
+}
+
 .slideshow-container {
   position: relative !important;
   width: 100%;
@@ -27,13 +46,15 @@
   display: none; /* the active slide is set to block by JS */
 }
 
-/* Fill the viewport; no distortion */
+/* Fill the viewport WITHOUT cropping */
 .slideshow-container .mySlides img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* was: cover */
+  object-position: center center;
   display: block;
   border-radius: 16px;
+  background: #111; /* fills letterbox/pillarbox area */
 }
 
 /* Arrows (namespaced + forced so theme can't override) */
