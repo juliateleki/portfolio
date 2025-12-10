@@ -1,0 +1,459 @@
+<!-- Nightly iOS Application Website Created by Julia Teleki on November 13, 2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nightly – Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Learn how Nightly handles your data. Your journal is stored securely on your device and never shared."
+    />
+
+    <style>
+      :root {
+        --bg: #020617;
+        --bg-alt: #020617;
+        --accent: #7f5af0;
+        --text: #f9fafb;
+        --text-muted: #9ca3af;
+        --border-subtle: rgba(148, 163, 184, 0.3);
+        --radius-lg: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Helvetica Neue", Arial, sans-serif;
+        background: radial-gradient(circle at top, #020617 0, #020617 55%);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(16px);
+        background: linear-gradient(
+          to bottom,
+          rgba(2, 6, 23, 0.9),
+          rgba(2, 6, 23, 0.7),
+          transparent
+        );
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      .nav-inner {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .nav-title {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* UPDATED: use PNG logo instead of CSS moon */
+      .logo-img {
+        width: 38px;
+        height: 38px;
+        border-radius: 999px;
+        box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.3),
+          0 12px 30px rgba(15, 23, 42, 0.8);
+        object-fit: cover;
+        display: block;
+      }
+
+      /* You can keep these unused or delete them if you like */
+      .logo-mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: radial-gradient(
+          circle at 30% 20%,
+          #f9fafb 0,
+          #e5e7eb 18%,
+          #1f2937 55%
+        );
+        box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.3),
+          0 12px 30px rgba(15, 23, 42, 0.8);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .logo-moon {
+        position: absolute;
+        inset: 7px;
+        border-radius: 999px;
+        background: radial-gradient(
+          circle at 30% 20%,
+          #f9fafb 0,
+          #e5e7eb 35%,
+          #9ca3af 90%
+        );
+        transform: translateX(-3px);
+      }
+
+      .logo-glow {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 30% 20%,
+          rgba(129, 140, 248, 0.7),
+          transparent 55%
+        );
+        mix-blend-mode: screen;
+      }
+
+      .nav-title-main {
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        font-size: 1.02rem;
+      }
+
+      .nav-title-sub {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 0.88rem;
+      }
+
+      .nav-link {
+        color: var(--text-muted);
+        position: relative;
+        padding-bottom: 2px;
+      }
+
+      .nav-link:hover {
+        color: var(--text);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(to right, #7f5af0, #22d3ee);
+        border-radius: 999px;
+        transition: width 0.2s ease-out;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .content {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 40px 20px 56px;
+      }
+
+      .eyebrow {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--text-muted);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .eyebrow-pill {
+        height: 2px;
+        width: 34px;
+        border-radius: 999px;
+        background: linear-gradient(to right, #22d3ee, #7f5af0);
+        opacity: 0.9;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 4vw, 2.3rem);
+        margin: 0 0 8px;
+      }
+
+      .last-updated {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+
+      .policy-card {
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-subtle);
+        background: radial-gradient(
+          circle at top left,
+          rgba(15, 23, 42, 0.9),
+          #020617
+        );
+        padding: 20px 18px 18px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+      }
+
+      h2 {
+        font-size: 1.15rem;
+        margin-top: 18px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: var(--text-muted);
+        margin: 8px 0;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 8px 0 16px;
+      }
+
+      li {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+      }
+
+      .highlight-box {
+        border-radius: 14px;
+        border: 1px dashed rgba(148, 163, 184, 0.6);
+        background: rgba(15, 23, 42, 0.7);
+        padding: 12px 12px 10px;
+        margin: 4px 0 16px;
+        font-size: 0.86rem;
+      }
+
+      .highlight-box strong {
+        color: #e5e7eb;
+      }
+
+      footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.3);
+        background: radial-gradient(
+          circle at top,
+          rgba(15, 23, 42, 0.9),
+          #020617
+        );
+      }
+
+      .footer-inner {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 16px 20px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 640px) {
+        .nav-inner {
+          padding-inline: 16px;
+        }
+
+        .content {
+          padding-inline: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="nav">
+        <div class="nav-inner">
+          <div class="nav-left">
+            <img
+              src="nightly_moon_app_icon_1024_v5_bluehalo.png"
+              alt="Nightly logo"
+              class="logo-img"
+            />
+
+            <div class="nav-title">
+              <span class="nav-title-main">Nightly</span>
+              <span class="nav-title-sub">Gentle journaling for iOS</span>
+            </div>
+          </div>
+
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Back to app</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="content">
+          <div class="eyebrow">
+            <span class="eyebrow-pill"></span>
+            <span>Privacy</span>
+          </div>
+
+          <h1>Privacy Policy</h1>
+          <!-- Update this date whenever you publish a new version -->
+          <p class="last-updated">Last updated: December 9, 2025</p>
+
+          <div class="policy-card">
+            <p class="highlight-box">
+              <strong>Short version:</strong> Nightly does not collect, store,
+              or transmit your personal journal data to me (the developer) or to
+              any external server. Your entries are securely stored on your
+              device, and I do not have access to what you write.
+            </p>
+
+            <h2>What Nightly is</h2>
+            <p>
+              Nightly is a small SwiftUI journaling app designed to help you
+              reflect on your day in a calm, focused way. You can write short
+              entries, answer prompts, and review your history over time. The
+              app is intentionally simple and private.
+            </p>
+
+            <h2>Data storage</h2>
+            <p>
+              Nightly stores your journal entries and related data locally on
+              your device. This means your writing lives on your iPhone and is
+              not uploaded to a server that I control.
+            </p>
+            <ul>
+              <li>Your entries are saved only on your device.</li>
+              <li>I do not operate a Nightly server that stores your data.</li>
+              <li>
+                I do not have technical access to what you write inside the app.
+              </li>
+            </ul>
+
+            <h2>No accounts, tracking, or analytics</h2>
+            <p>
+              Nightly does not require you to create an account or sign in. The
+              app does not include third-party analytics, advertising SDKs, or
+              tracking libraries that monitor how you use the app or what you
+              write.
+            </p>
+            <ul>
+              <li>No user accounts or logins.</li>
+              <li>No in-app advertising or ad tracking.</li>
+              <li>
+                No sale or sharing of your personal data with third parties.
+              </li>
+            </ul>
+
+            <h2>What I do <em>not</em> collect</h2>
+            <p>In particular, I do <strong>not</strong> collect or receive:</p>
+            <ul>
+              <li>The contents of your journal entries.</li>
+              <li>Your moods, tags, or any reflections you write.</li>
+              <li>Personal identifiers tied to your entries.</li>
+            </ul>
+
+            <h2>Security on your device</h2>
+            <p>
+              Because your data stays on your device, it is protected by the
+              security features of your iPhone (for example, your passcode, Face
+              ID, or Touch ID). If someone can unlock your phone, they may be
+              able to open Nightly and read your entries, just like any other
+              app on your device.
+            </p>
+            <p>For the best protection of your journal:</p>
+            <ul>
+              <li>Use a strong passcode on your device.</li>
+              <li>Keep your device’s operating system up to date.</li>
+            </ul>
+
+            <h2>Backups and iCloud</h2>
+            <p>
+              Nightly itself does not upload your entries to a server that I
+              control. However, depending on your device settings, your app data
+              may be included in your regular device backups (for example,
+              encrypted iCloud backups or local backups). Those backups are
+              handled by Apple or your computer, not by me.
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+              If you have any questions about this privacy policy or how Nightly
+              handles data on your device, you can contact me at:
+            </p>
+            <p>
+              <strong>julia@teleki.net</strong>
+            </p>
+
+            <h2>Changes to this policy</h2>
+            <p>
+              If Nightly’s functionality or data handling ever changes, I will
+              update this privacy policy and, where appropriate, update the
+              “Last updated” date at the top of this page. If major changes are
+              made, I will aim to clearly explain what has changed so you can
+              make an informed choice about continuing to use the app.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          <span>© <span id="year"></span> Nightly. All rights reserved.</span>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Back to Nightly</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
