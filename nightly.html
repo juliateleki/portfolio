@@ -160,7 +160,7 @@
       .hero-title {
         font-size: clamp(2.3rem, 4vw, 3rem);
         font-weight: 700;
-        line-height: 1.05;
+        line-height: 1.15;
         margin-bottom: 18px;
       }
 
@@ -168,6 +168,8 @@
         background: linear-gradient(to right, #e5e7eb, #a5b4fc);
         -webkit-background-clip: text;
         color: transparent;
+        display: inline-block; /* give the span its own box */
+        padding-bottom: 0.08em; /* tiny extra space under the “y” */
       }
 
       .hero-subtitle {
@@ -411,7 +413,7 @@
             <div class="eyebrow">SwiftUI Journaling App</div>
 
             <h1 class="hero-title">
-              Wind down your day with <span>Nightly </span>.
+              Wind down your day with <span>Nightly</span>.
             </h1>
 
             <p class="hero-subtitle">
