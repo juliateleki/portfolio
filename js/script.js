@@ -54,12 +54,6 @@ async function loadProjects() {
         {
           name: 'Forensic Nursing Web App',
           date: 'Nov 24, 2023',
-          type: 'Diagnosis Screen',
-          img: 'images/forensicnursingdiagnosis.png',
-        },
-        {
-          name: 'Forensic Nursing Web App',
-          date: 'Nov 24, 2023',
           type: 'Decision Tree',
           img: 'images/forensicnursingdecisontree.png',
         },
