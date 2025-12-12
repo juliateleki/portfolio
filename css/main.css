@@ -689,6 +689,12 @@ body[data-theme='dark'] .site-footer {
 
 /* Responsive tweaks */
 
+@media (min-width: 992px) {
+  .hero-copy {
+    margin-left: 124px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .hero-inner {
     padding-top: 40px;
