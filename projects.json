@@ -1,6 +1,42 @@
 {
   "codingProjects": [
     {
+      "name": "Nightly Reflections iOS App",
+      "date": "Dec 11, 2025",
+      "type": "Nightly Home Page",
+      "img": "images/nightlyhomepage.png"
+    },
+    {
+      "name": "Nightly Reflections iOS App",
+      "date": "Dec 11, 2025",
+      "type": "Nightly Menu",
+      "img": "images/nightlymenu.png"
+    },
+    {
+      "name": "Nightly Reflections iOS App",
+      "date": "Dec 11, 2025",
+      "type": "Nightly Reading",
+      "img": "images/nightlyreading.png"
+    },
+    {
+      "name": "Nightly Reflections iOS App",
+      "date": "Dec 11, 2025",
+      "type": "Nightly History",
+      "img": "images/nightlyhistory.png"
+    },
+    {
+      "name": "Nightly Reflections iOS App",
+      "date": "Dec 11, 2025",
+      "type": "Nightly Prayer",
+      "img": "images/nightlyprayer.png"
+    },
+    {
+      "name": "Nightly Reflections iOS App",
+      "date": "Dec 11, 2025",
+      "type": "Nightly Counter",
+      "img": "images/nightlycounter.png"
+    },
+    {
       "name": "Forensic Nursing Web App",
       "date": "Nov 24, 2023",
       "type": "Web Application Screen",
@@ -45,18 +81,67 @@
   ],
   "artProjects": [
     {
+      "title": "Austin Painting",
+      "description": "The gorgeous Austin skyline in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/austin.jpg"
+    },
+    {
+      "title": "Fairy Painting",
+      "description": "Fairies walking through a beautiful land in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/fairy.jpg"
+    },
+    {
+      "title": "Yellow Flowers in a Field Painting",
+      "description": "A magical field of yellow flowers in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/yellowfield.png"
+    },
+    {
+      "title": "California State Park Painging",
+      "description": "A beautiful state park in California in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/statepark.jpg"
+    },
+    {
+      "title": "Abstract Painting",
+      "description": "Abstract art in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/abstract.jpg"
+    },
+    {
+      "title": "Sun and Moon Painting",
+      "description": "Sun and Moon kissing in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/sunmoon.jpg"
+    },
+    {
+      "title": "Sunrise Painting",
+      "description": "A magical sunrise in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/watersunrise.jpg"
+    },
+    {
+      "title": "Colorful Sky Painting",
+      "description": "Beautiful sky in acrylic.",
+      "link": "images/Paintings.pdf",
+      "linkText": "View Paintings",
+      "img": "images/sunset.jpg"
+    },
+    {
       "title": "Gesso Magazine",
       "description": "Arts 403 Final Project: A magazine featuring my favorite artists Doris Salcedo and Jean Michel Basquiat.",
       "link": "images/teleki_julia_arts403_magazine_spreads.pdf",
       "linkText": "View Magazine",
       "img": "images/teleki_julia_arts403-mockup1.png"
-    },
-    {
-      "title": "Acrylic Paintings",
-      "description": "2019-2025 collection featuring fantasy themes, original works, and studies.",
-      "link": "images/Paintings.pdf",
-      "linkText": "View Paintings",
-      "img": "images/sunset.jpg"
-    }
+    }   
   ]
 }

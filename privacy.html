@@ -28,8 +28,8 @@
 
       body {
         margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-          "Helvetica Neue", Arial, sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+          'Helvetica Neue', Arial, sans-serif;
         background: radial-gradient(circle at top, #020617 0, #020617 55%);
         color: var(--text);
         -webkit-font-smoothing: antialiased;
@@ -163,7 +163,7 @@
       }
 
       .nav-link::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: 0;
@@ -446,14 +446,14 @@
         <div class="footer-inner">
           <span>© <span id="year"></span> Nightly. All rights reserved.</span>
           <div class="footer-links">
-            <a href="index.html" class="footer-link">Back to Nightly</a>
+            <a href="nightly.html" class="footer-link">Back to Nightly</a>
           </div>
         </div>
       </footer>
     </div>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

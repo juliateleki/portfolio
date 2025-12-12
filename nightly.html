@@ -235,10 +235,9 @@
         justify-content: flex-end;
       }
 
-      /* outer device frame */
       .phone-shell {
         width: min(320px, 100%);
-        aspect-ratio: 74 / 143; /* matches 740x1430 screenshot exactly */
+        aspect-ratio: 74 / 143;
         border-radius: 34px;
         border: 1px solid rgba(148, 163, 184, 0.55);
         padding: 8px;
@@ -251,14 +250,13 @@
         );
       }
 
-      /* inner glowing frame */
       .phone-bezel {
         width: 100%;
         height: 100%;
         border-radius: 26px;
         border: 1px solid rgba(56, 189, 248, 0.5);
         background: #020617;
-        padding: 0; /* no extra space inside */
+        padding: 0;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -269,11 +267,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top; /* keep top visible */
+        object-position: top;
         display: block;
       }
 
-      /* FEATURES */
+      /* SECTIONS */
 
       .section {
         max-width: 1040px;
@@ -319,6 +317,27 @@
         color: var(--text-muted);
       }
 
+      /* SUPPORT SECTION */
+
+      .support-card {
+        max-width: 520px;
+        margin-top: 12px;
+      }
+
+      .support-actions {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .support-email {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          'Liberation Mono', 'Courier New', monospace;
+        font-size: 0.9rem;
+      }
+
       /* FOOTER */
 
       footer {
@@ -336,6 +355,14 @@
         flex-wrap: wrap;
         color: var(--text-muted);
         font-size: 0.8rem;
+        gap: 8px;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
       }
 
       @media (max-width: 860px) {
@@ -371,6 +398,7 @@
 
           <div class="nav-links">
             <a href="#features" class="nav-link">How it works</a>
+            <a href="#support" class="nav-link">Support</a>
             <a href="privacy.html" class="nav-link">Privacy</a>
             <a href="#" class="nav-cta">Download</a>
           </div>
@@ -450,13 +478,46 @@
             </div>
           </div>
         </section>
+
+        <!-- NEW SUPPORT SECTION -->
+        <section class="section" id="support">
+          <h2 class="section-title">Support</h2>
+          <p class="section-subtitle">
+            If you have any questions about Nightly, run into issues, or want to
+            share feedback, you can reach the developer directly by email.
+          </p>
+
+          <div class="feature-card support-card">
+            <h3 class="feature-name">Contact Nightly Support</h3>
+            <p class="feature-body">
+              For support, bug reports, or feature requests, please email:
+            </p>
+            <p class="feature-body support-email">
+              <strong>nightly@teleki.net</strong>
+            </p>
+            <p class="feature-body">
+              When you write, it can be helpful to include your iOS version and
+              a short description of what you were doing when the issue
+              occurred.
+            </p>
+
+            <div class="support-actions">
+              <a href="mailto:nightly@teleki.net" class="btn-secondary">
+                Email Support
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer>
         <div class="footer-inner">
           <span>© <span id="year"></span> Nightly</span>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="index.html" class="footer-link">← Return to Portfolio</a>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="#support">Support</a>
+            <a href="index.html" class="footer-link">← Return to Portfolio</a>
+          </div>
         </div>
       </footer>
     </div>

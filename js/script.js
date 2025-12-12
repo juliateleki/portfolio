@@ -22,22 +22,6 @@ const PLACEHOLDER = encodeURI(
     '</svg>'
 );
 
-/***** LOAD PROJECTS *****/
-async function loadProjects() {
-  try {
-    const res = await fetch('projects.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-
-    console.log('Loaded projects.json', data);
-
-    buildCarousel('coding', data.codingProjects);
-    buildCarousel('art', data.artProjects);
-  } catch (err) {
-    console.error('Error loading projects.json:', err);
-  }
-}
-
 /***** BUILD CAROUSEL *****/
 function buildCarousel(type, projects = []) {
   const container = document.getElementById(`${type}-carousel`);
@@ -96,7 +80,6 @@ function buildCarousel(type, projects = []) {
     img.addEventListener('load', () => {
       const h = img.naturalHeight * (container.clientWidth / img.naturalWidth);
       if (!isNaN(h) && h > 0) {
-        // keep some headroom for caption
         container.style.minHeight =
           Math.max(
             parseInt(container.style.minHeight || 0),
@@ -145,15 +128,10 @@ function showSlides(n, type) {
     dots[slideIndices[type] - 1].className += ' active';
 }
 
-/***** BOOT *****/
-document.addEventListener('DOMContentLoaded', () => {
-  showCurrentDate();
-  loadProjects();
-});
-/***** LOAD PROJECTS (with fallback) *****/
+/***** LOAD PROJECTS (with fallback that includes Nightly) *****/
 async function loadProjects() {
   try {
-    const res = await fetch('projects.json', { cache: 'no-store' });
+    const res = await fetch('./projects.json', { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     console.log('Loaded projects.json', data);
@@ -164,9 +142,14 @@ async function loadProjects() {
       err
     );
 
-    // 🔻 Your current JSON as a fallback
     const fallback = {
       codingProjects: [
+        {
+          name: 'Nightly iOS App',
+          date: 'Dec 11, 2025',
+          type: 'Nightly Home Page',
+          img: 'images/nightlyhomepage.png',
+        },
         {
           name: 'Forensic Nursing Web App',
           date: 'Nov 24, 2023',
@@ -235,6 +218,12 @@ async function loadProjects() {
 }
 
 function useData(data) {
-  buildCarousel('coding', data.codingProjects);
-  buildCarousel('art', data.artProjects);
+  buildCarousel('coding', data.codingProjects || []);
+  buildCarousel('art', data.artProjects || []);
 }
+
+/***** BOOT *****/
+document.addEventListener('DOMContentLoaded', () => {
+  showCurrentDate();
+  loadProjects();
+});
