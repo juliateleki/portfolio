@@ -18,10 +18,91 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/templatemo-festava-live.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/templatemo-festava-live.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
 
+    <!-- Carousel Enhancements -->
+    <style>
+      /* Make carousel resize smoothly */
+      .slideshow-container {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        transition: height 0.25s ease;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      /* Cute rounded screenshot look */
+      .mySlides img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        display: block;
+        object-fit: contain;
+        background: radial-gradient(circle at top, #101624, #000814);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+      }
+
+      /* Caption */
+      .mySlides .text {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #e5e7eb;
+      }
+
+      /* Arrows */
+      .slide-prev,
+      .slide-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 14px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 50%;
+        background: rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(8px);
+        transition: 0.25s ease;
+        user-select: none;
+        text-decoration: none;
+      }
+
+      .slide-prev:hover,
+      .slide-next:hover {
+        background: rgba(148, 163, 184, 0.95);
+        color: #000;
+      }
+
+      .slide-prev {
+        left: 10px;
+      }
+
+      .slide-next {
+        right: 10px;
+      }
+
+      /* Dots */
+      .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 4px;
+        background-color: #4b5563;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.2s;
+      }
+
+      .dot.active {
+        background-color: #facc15;
+      }
+    </style>
   </head>
+
   <body>
     <main>
       <!-- Header -->
@@ -178,8 +259,12 @@
 
                 <h4 class="text-white mt-4">Education</h4>
                 <ul class="text-white">
-                  <li class="text-white">Vista Ridge High School, 2014-2018, GPA: 3.8/4.0</li>
-                  <li class="text-white">Texas A&M University, 2018-2024, GPA: 3.6/4.0</li>
+                  <li class="text-white">
+                    Vista Ridge High School, 2014-2018, GPA: 3.8/4.0
+                  </li>
+                  <li class="text-white">
+                    Texas A&M University, 2018-2024, GPA: 3.6/4.0
+                  </li>
                 </ul>
 
                 <h4 class="text-white mt-4">Experience</h4>
@@ -233,45 +318,59 @@
         </div>
       </section>
 
-<!-- Coding Section -->
-<!-- Coding Section -->
-<section class="artists-section section-padding" id="section_3">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 text-center">
-        <h2 class="mb-4">Coding</h2>
-      </div>
-    </div>
+      <!-- Coding Section -->
+      <section class="artists-section section-padding" id="section_3">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <h2 class="mb-4">Coding</h2>
+            </div>
+          </div>
 
-    <!-- Coding Carousel -->
-  <div class="slideshow-container" id="coding-carousel">
-    <a class="slide-prev" onclick="plusSlides(-1, 'coding'); return false;">&#10094;</a>
-    <a class="slide-next" onclick="plusSlides(1, 'coding'); return false;">&#10095;</a>
-  </div>
-<div style="text-align:center" id="coding-dots"></div>
-  </div>
-</section>
+          <!-- Coding Carousel -->
+          <div class="slideshow-container" id="coding-carousel">
+            <a
+              class="slide-prev"
+              onclick="plusSlides(-1, 'coding'); return false;"
+              >&#10094;</a
+            >
+            <a
+              class="slide-next"
+              onclick="plusSlides(1, 'coding'); return false;"
+              >&#10095;</a
+            >
+          </div>
+          <div style="text-align: center" id="coding-dots"></div>
+        </div>
+      </section>
 
-<!-- Art Section -->
-<section class="pricing-section section-padding section-bg" id="section_4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="mb-4">Art</h2>
-      </div>
-    </div>
+      <!-- Art Section -->
+      <section
+        class="pricing-section section-padding section-bg"
+        id="section_4"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="mb-4">Art</h2>
+            </div>
+          </div>
 
-    <!-- Art Carousel -->
-  <div class="slideshow-container" id="art-carousel">
-    <a class="slide-prev" onclick="plusSlides(-1, 'art'); return false;">&#10094;</a>
-    <a class="slide-next" onclick="plusSlides(1, 'art'); return false;">&#10095;</a>
-  </div>
-<div style="text-align:center" id="art-dots"></div>
-  </div>
-</section>
+          <!-- Art Carousel -->
+          <div class="slideshow-container" id="art-carousel">
+            <a class="slide-prev" onclick="plusSlides(-1, 'art'); return false;"
+              >&#10094;</a
+            >
+            <a class="slide-next" onclick="plusSlides(1, 'art'); return false;"
+              >&#10095;</a
+            >
+          </div>
+          <div style="text-align: center" id="art-dots"></div>
+        </div>
+      </section>
+    </main>
 
-
-    <!-- Scripts (load in correct order) -->
+    <!-- Scripts -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.sticky.js"></script>
