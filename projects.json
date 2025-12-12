@@ -82,58 +82,50 @@
   "artProjects": [
     {
       "title": "Austin Painting",
-      "description": "The gorgeous Austin skyline in acrylic.",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/austin.jpg"
     },
     {
       "title": "Fairy Painting",
-      "description": "Fairies walking through a beautiful land in acrylic.",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/fairy.jpg"
     },
     {
       "title": "Yellow Flowers in a Field Painting",
-      "description": "A magical field of yellow flowers in acrylic.",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/yellowfield.png"
     },
     {
-      "title": "California State Park Painging",
-      "description": "A beautiful state park in California in acrylic.",
+      "title": "California State Park Painting",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/statepark.jpg"
     },
     {
       "title": "Abstract Painting",
-      "description": "Abstract art in acrylic.",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/abstract.jpg"
     },
     {
       "title": "Sun and Moon Painting",
-      "description": "Sun and Moon kissing in acrylic.",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/sunmoon.jpg"
     },
     {
       "title": "Sunrise Painting",
-      "description": "A magical sunrise in acrylic.",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/watersunrise.jpg"
     },
     {
       "title": "Colorful Sky Painting",
-      "description": "Beautiful sky in acrylic.",
       "link": "images/Paintings.pdf",
-      "linkText": "View Paintings",
+      "linkText": "View All Paintings",
       "img": "images/sunset.jpg"
     },
     {

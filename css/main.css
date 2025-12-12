@@ -687,7 +687,50 @@ body[data-theme='dark'] .site-footer {
   color: var(--text);
 }
 
+/* Default hamburger icon style */
+.navbar-burger-icon {
+  font-size: 1.9rem;
+  color: var(--text); /* text variable already switches for dark/light */
+}
+
+/* Force visibility in dark mode */
+body[data-theme='dark'] .navbar-burger-icon {
+  color: #facc15 !important; /* bright yellow so it's always visible */
+}
+
+/* Optional: Make it darker in light mode */
+body[data-theme='light'] .navbar-burger-icon {
+  color: #111 !important;
+}
+
 /* Responsive tweaks */
+
+/* Mobile navbar menu styling */
+@media (max-width: 991.98px) {
+  .main-navbar .navbar-collapse {
+    background: var(--bg);
+    padding: 12px 0;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .main-navbar .nav-link {
+    padding: 10px 18px;
+    font-size: 1rem;
+    display: block;
+  }
+
+  .main-navbar .nav-link:hover {
+    background: var(--accent-soft);
+    border-radius: var(--radius-md);
+  }
+
+  /* Show theme + resume buttons inside the mobile menu */
+  .navbar-collapse .theme-toggle-btn,
+  .navbar-collapse .pill-btn-primary {
+    display: inline-flex !important;
+    margin: 10px 18px;
+  }
+}
 
 @media (min-width: 992px) {
   .hero-copy {
