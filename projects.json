@@ -4,37 +4,37 @@
       "name": "Nightly Reflections iOS App",
       "date": "Dec 11, 2025",
       "type": "Nightly Home Page",
-      "img": "images/nightlyhomepage.png"
+      "img": "images/nightlyhomepage.PNG"
     },
     {
       "name": "Nightly Reflections iOS App",
       "date": "Dec 11, 2025",
       "type": "Nightly Menu",
-      "img": "images/nightlymenu.png"
+      "img": "images/nightlymenu.PNG"
     },
     {
       "name": "Nightly Reflections iOS App",
       "date": "Dec 11, 2025",
       "type": "Nightly Reading",
-      "img": "images/nightlyreading.png"
+      "img": "images/nightlyreading.PNG"
     },
     {
       "name": "Nightly Reflections iOS App",
       "date": "Dec 11, 2025",
       "type": "Nightly History",
-      "img": "images/nightlyhistory.png"
+      "img": "images/nightlyhistory.PNG"
     },
     {
       "name": "Nightly Reflections iOS App",
       "date": "Dec 11, 2025",
       "type": "Nightly Prayer",
-      "img": "images/nightlyprayer.png"
+      "img": "images/nightlyprayer.PNG"
     },
     {
       "name": "Nightly Reflections iOS App",
       "date": "Dec 11, 2025",
       "type": "Nightly Counter",
-      "img": "images/nightlycounter.png"
+      "img": "images/nightlycounter.PNG"
     },
     {
       "name": "Forensic Nursing Web App",
@@ -142,6 +142,6 @@
       "link": "images/teleki_julia_arts403_magazine_spreads.pdf",
       "linkText": "View Magazine",
       "img": "images/teleki_julia_arts403-mockup1.png"
-    }   
+    }
   ]
 }
