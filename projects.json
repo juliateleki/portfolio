@@ -2,79 +2,78 @@
   "codingProjects": [
     {
       "name": "Nightly Reflections iOS App",
-      "date": "Dec 11, 2025",
       "type": "Nightly Home Page",
-      "img": "images/nightlyhomepage.PNG"
+      "img": "images/nightlyhomepage.PNG",
+      "link": "nightly.html",
+      "linkText": "View Nightly"
     },
     {
       "name": "Nightly Reflections iOS App",
-      "date": "Dec 11, 2025",
       "type": "Nightly Menu",
-      "img": "images/nightlymenu.PNG"
+      "img": "images/nightlymenu.PNG",
+      "link": "nightly.html",
+      "linkText": "View Nightly"
     },
     {
       "name": "Nightly Reflections iOS App",
-      "date": "Dec 11, 2025",
       "type": "Nightly Reading",
-      "img": "images/nightlyreading.PNG"
+      "img": "images/nightlyreading.PNG",
+      "link": "nightly.html",
+      "linkText": "View Nightly"
     },
     {
       "name": "Nightly Reflections iOS App",
-      "date": "Dec 11, 2025",
       "type": "Nightly History",
-      "img": "images/nightlyhistory.PNG"
+      "img": "images/nightlyhistory.PNG",
+      "link": "nightly.html",
+      "linkText": "View Nightly"
     },
     {
       "name": "Nightly Reflections iOS App",
-      "date": "Dec 11, 2025",
       "type": "Nightly Prayer",
-      "img": "images/nightlyprayer.PNG"
+      "img": "images/nightlyprayer.PNG",
+      "link": "nightly.html",
+      "linkText": "View Nightly"
     },
     {
       "name": "Nightly Reflections iOS App",
-      "date": "Dec 11, 2025",
       "type": "Nightly Counter",
-      "img": "images/nightlycounter.PNG"
+      "img": "images/nightlycounter.PNG",
+      "link": "nightly.html",
+      "linkText": "View Nightly"
     },
     {
       "name": "Forensic Nursing Web App",
-      "date": "Nov 24, 2023",
       "type": "Web Application Screen",
       "img": "images/forensicnursingscreen.png"
     },
     {
       "name": "Forensic Nursing Web App",
-      "date": "Nov 24, 2023",
       "type": "Diagnosis Screen",
       "img": "images/forensicnursingdiagnosis.png"
     },
     {
       "name": "Forensic Nursing Web App",
-      "date": "Nov 24, 2023",
       "type": "Decision Tree",
       "img": "images/forensicnursingdecisontree.png"
     },
     {
       "name": "Enigma",
-      "date": "Apr 24, 2024",
       "type": "Decision Tree",
       "img": "images/enigmadecisiontree.png"
     },
     {
       "name": "Enigma",
-      "date": "Apr 24, 2024",
       "type": "Horror Game",
       "img": "images/enigma.png"
     },
     {
       "name": "Enigma",
-      "date": "Apr 24, 2024",
       "type": "Horror Game",
       "img": "images/enigma2.png"
     },
     {
       "name": "Enigma",
-      "date": "Apr 24, 2024",
       "type": "Horror Game",
       "img": "images/enigma3.png"
     }
