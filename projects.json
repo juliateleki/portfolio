@@ -80,6 +80,12 @@
   ],
   "artProjects": [
     {
+      "title": "Yellow Flowers in a Field Painting",
+      "link": "images/Paintings.pdf",
+      "linkText": "View All Paintings",
+      "img": "images/yellowfield.png"
+    },
+    {
       "title": "Austin Painting",
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
@@ -90,12 +96,6 @@
       "link": "images/Paintings.pdf",
       "linkText": "View All Paintings",
       "img": "images/fairy.jpg"
-    },
-    {
-      "title": "Yellow Flowers in a Field Painting",
-      "link": "images/Paintings.pdf",
-      "linkText": "View All Paintings",
-      "img": "images/yellowfield.png"
     },
     {
       "title": "California State Park Painting",
