@@ -22,6 +22,7 @@
 
     <!-- Your unified styles -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/refresh.css" />
   </head>
 
   <body data-theme="dark">
@@ -33,7 +34,7 @@
             <div class="col-12 d-flex flex-wrap justify-content-between">
               <p class="d-flex align-items-center mb-0">
                 <i class="bi-person custom-icon me-2"></i>
-                <strong class="text-light">Julia Teleki · Portfolio</strong>
+                <strong>Julia Teleki · Portfolio</strong>
               </p>
               <p class="d-flex align-items-center mb-0 top-bar-tagline">
                 <span>Software · Design · Art</span>
@@ -85,10 +86,13 @@
                 <a class="nav-link" href="#section_2">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#section_3">Coding</a>
+                <a class="nav-link" href="#section_3">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#section_4">Art</a>
+                <a class="nav-link" href="#section_4">Coding</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section_5">Art</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="nightly.html">Nightly</a>
@@ -143,32 +147,33 @@
         <div class="container hero-inner">
           <div class="row align-items-center">
             <div class="col-lg-7 hero-copy">
-              <div class="hero-eyebrow">Based in Texas · Open to work</div>
+              <div class="hero-eyebrow">Based in Austin, Texas</div>
               <h1 class="hero-title">
                 Building thoughtful
                 <span>software &amp; experiences</span>
                 that help people feel a little more grounded.
               </h1>
               <p class="hero-subtitle">
-                I’m Julia, a computer scientist and artist who loves turning
-                messy ideas into clean, gentle interfaces—like Nightly, a
-                nightly inventory iOS app, and DingDuff, an AI assistant for
-                lawyers.
+                I’m Julia, a full-stack software engineer in Austin. I build
+                backend services and web features for a video streaming
+                platform at BitKernel, and in my free time I make apps like
+                Nightly and DingDuff.
               </p>
 
               <div class="hero-badges">
+                <span class="badge-chip">Java · Spring Boot</span>
+                <span class="badge-chip">TypeScript · React</span>
+                <span class="badge-chip">Ruby on Rails</span>
+                <span class="badge-chip">Python</span>
                 <span class="badge-chip">SwiftUI · iOS</span>
-                <span class="badge-chip">Python · AI / ML</span>
-                <span class="badge-chip">React · Web</span>
-                <span class="badge-chip">Illustration &amp; Layout</span>
               </div>
 
               <div class="hero-actions">
-                <a href="#section_3" class="btn pill-btn-primary">
+                <a href="#section_4" class="btn pill-btn-primary">
                   View coding work
                   <span class="bi-arrow-right-short"></span>
                 </a>
-                <a href="#section_4" class="btn pill-btn-ghost"> View art </a>
+                <a href="#section_5" class="btn pill-btn-ghost"> View art </a>
               </div>
 
               <div class="hero-meta">
@@ -219,209 +224,131 @@
       </section>
 
       <!-- About Section -->
-      <section class="section-padding about-section" id="section_2">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="card-surface">
-                <h2>About Julia</h2>
-                <p>
-                  I’m Julia, a full-stack software engineer in Austin. I studied
-                  Computer Science with a minor in Graphic Design at Texas
-                  A&amp;M, and I still approach software the way I approach a
-                  canvas: get the structure right first, then make it feel good
-                  to use.
-                </p>
-
-                <p>
-                  Right now I work at BitKernel on Goose, a SaaS platform for
-                  live and on-demand video that runs on web, Android, iOS and
-                  smart TVs. I build Java/Spring Boot backend services, fix bugs
-                  in our TypeScript web SDK, and track down problems wherever
-                  they turn up, from Redis queues to native crash logs. I also
-                  review a lot of my teammates’ code, and I run the tests myself
-                  instead of just reading the diff. That habit has caught some
-                  sneaky bugs before they shipped.
-                </p>
-
-                <p>
-                  Outside of work, I build things I want to exist. DingDuff is a
-                  free AI legal research tool I’m building with friends. It
-                  pulls U.S. case law from CourtListener and uses a series of
-                  LLM steps to filter and summarize long court opinions into
-                  something lawyers can actually use. Nightly is an iOS app for
-                  nightly reflection that I designed, built and launched on the
-                  App Store by myself, and Applied is a job application tracker
-                  I built to learn what actually leads to better outcomes in a
-                  job search. In school I helped build a clinical decision tool
-                  for forensic nurses, which is where I learned how much careful
-                  design matters when people are under pressure.
-                </p>
-
-                <p>
-                  When I’m not coding, I draw and paint. That background shapes
-                  how I think about hierarchy, spacing and atmosphere on a
-                  screen. Across everything I make, the goal is the same:
-                  software that is reliable and calm, and helps people feel a
-                  little more grounded.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="card-surface about-me-card">
-                <h3>Experience</h3>
-                <ul class="experience-list">
-                  <li>
-                    <h6>BitKernel · Software Developer</h6>
-                    <p>
-                      Full stack engineer on Goose, a SaaS platform for live and
-                      on-demand video (web, Android, iOS, Java services). Built
-                      Java/Spring Boot services for a just-in-time video
-                      transcoding system that let a client launch its entire
-                      video library at once: job dispatch, lifecycle tracking,
-                      backfill and failover. Traced a production iOS crash to
-                      native C/C++ code and verified the fix with A/B builds and
-                      a soak test. Shipped TypeScript/Vue fixes, OpenTelemetry
-                      analytics on three platforms, and a coordinated production
-                      release across web, Android and iOS. Authored ~100 PRs
-                      across 12 repos and reviewed ~110.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>Applied · Web Application</h6>
-                    <p>
-                      Full stack job application tracker: React + TypeScript
-                      frontend, FastAPI + PostgreSQL API with SQLAlchemy and
-                      Alembic migrations, Dockerized. Tracks each application's
-                      status history and flags stale ones.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>Nightly Reflections · iOS App</h6>
-                    <p>
-                      Designed, built and launched Nightly solo, a privacy
-                      focused iOS journaling and sobriety support app. Handled
-                      everything myself, including SwiftUI engineering, UX/UI
-                      design, local data persistence, and App Store deployment.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>SEC Budget Request System · Client Project</h6>
-                    <p>
-                      Rails 6 + PostgreSQL app for Texas A&amp;M's Student
-                      Engineering Council to manage committee budgets, delivered
-                      to the client on Heroku. Built the financial forms feature
-                      end to end, brought the RSpec suite to 43/43 passing, added
-                      GitHub Actions CI and verified Google OAuth sign-in.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>Plant Life · iOS App</h6>
-                    <p>
-                      SwiftUI iOS application that gamifies plant care through a
-                      virtual currency system, enabling users to earn coins and
-                      customize their in-app living space.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>DingDuff · AI Legal Assistant</h6>
-                    <p>
-                      Designed and built an AI powered legal research system
-                      that retrieves, filters, and summarizes U.S. case law
-                      using CourtListener APIs and multi-stage LLM pipelines.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>ANTISA · Forensic Nursing Web App</h6>
-                    <p>
-                      Flask + SQLite web app that guides TAMU forensic nurses
-                      through a structured clinical decision algorithm to
-                      determine potential medication interventions for sexual
-                      assault survivors, with a pytest test suite. Senior
-                      capstone project.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>Cognitive Scale · CRM Insights</h6>
-                    <p>
-                      Intern on the CRM Insights project, which scrapes news
-                      about companies in an asset manager’s mutual funds and
-                      scores sentiment and client exposure. Built user
-                      interfaces with HTML, CSS, React, and JavaScript, and
-                      supported user acceptance testing by validating
-                      workflows, UI behavior, and feature readiness.
-                    </p>
-                  </li>
-                  <li>
-                    <h6>Enigma · Narrative Game</h6>
-                    <p>
-                      Ren’Py horror game with branching storylines and visual
-                      storytelling. Decisions in the game change the storyline,
-                      and open different characters and minigames.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <section class="section-padding split-section" id="section_2">
+        <div class="container split">
+          <h2 class="split-label">About</h2>
+          <div class="split-body about-copy">
+            <p>I’m Julia, a full-stack software engineer in Austin. I studied Computer Science with a minor in Graphic Design at Texas A&amp;M, and I still approach software the way I approach a canvas: get the structure right first, then make it feel good to use.</p>
+            <p>Right now I work at BitKernel on Goose, a SaaS platform for live and on-demand video that runs on web, Android, iOS and smart TVs. I build Java/Spring Boot backend services, fix bugs in our TypeScript web SDK, and track down problems wherever they turn up, from Redis queues to native crash logs. I also review a lot of my teammates’ code, and I run the tests myself instead of just reading the diff. That habit has caught some sneaky bugs before they shipped.</p>
+            <p>Outside of work, I build things I want to exist. DingDuff is a free AI legal research tool I’m building with friends. It pulls U.S. case law from CourtListener and uses a series of LLM steps to filter and summarize long court opinions into something lawyers can actually use. Nightly is an iOS app for nightly reflection that I designed, built and launched on the App Store by myself, and Applied is a job application tracker I built to learn what actually leads to better outcomes in a job search. In school I helped build a clinical decision tool for forensic nurses, which is where I learned how much careful design matters when people are under pressure.</p>
+            <p>When I’m not coding, I draw, paint and spend time in my garden (Plant Life is a little love letter to that). Art shapes how I think about hierarchy, spacing and atmosphere on a screen. Across everything I make, the goal is the same: software that is reliable and calm, and helps people feel a little more grounded.</p>
           </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section-padding split-section">
+        <div class="container split">
+          <h2 class="split-label">Experience</h2>
+          <ul class="split-body entry-list">
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>BitKernel</h3>
+                  <span class="entry-meta">Software Developer · Since 2026</span>
+                </div>
+                <p>Full stack engineer on Goose, a SaaS platform for live and on-demand video (web, Android, iOS, Java services). Built Java/Spring Boot services for a just-in-time video transcoding system that let a client launch its entire video library at once: job dispatch, lifecycle tracking, backfill and failover. Traced a production iOS crash to native C/C++ code and verified the fix with A/B builds and a soak test. Shipped TypeScript/Vue fixes, OpenTelemetry analytics on three platforms, and a coordinated production release across web, Android and iOS. Authored ~100 PRs across 12 repos and reviewed ~110.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>DingDuff</h3>
+                  <span class="entry-meta">Software Developer · Since 2025</span>
+                </div>
+                <p>Designed and built an AI powered legal research system that retrieves, filters, and summarizes U.S. case law using CourtListener APIs and multi-stage LLM pipelines.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>ANTISA</h3>
+                  <span class="entry-meta">Software Developer · Capstone · 2023</span>
+                </div>
+                <p>Flask + SQLite web app that guides TAMU forensic nurses through a structured clinical decision algorithm to determine potential medication interventions for sexual assault survivors, with a pytest test suite.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>SEC</h3>
+                  <span class="entry-meta">Software Developer · Client Project · 2022</span>
+                </div>
+                <p>Rails 6 + PostgreSQL app for Texas A&amp;M's Student Engineering Council to manage committee budgets, delivered to the client on Heroku. Built the financial forms feature end to end, brought the RSpec suite to 43/43 passing, added GitHub Actions CI and verified Google OAuth sign-in.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>Cognitive Scale</h3>
+                  <span class="entry-meta">Intern · 2019</span>
+                </div>
+                <p>Intern on the CRM Insights project, which scrapes news about companies in an asset manager’s mutual funds and scores sentiment and client exposure. Built user interfaces with HTML, CSS, React, and JavaScript, and supported user acceptance testing by validating workflows, UI behavior, and feature readiness.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>Technology Pointe</h3>
+                  <span class="entry-meta">IT Intern · 2018</span>
+                </div>
+                <p>Supported IT operations by triaging hardware and software tickets and assisting with system diagnostics and hardware teardown.</p>
+              </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section-padding split-section" id="section_3">
+        <div class="container split">
+          <h2 class="split-label">Projects</h2>
+          <ul class="split-body entry-list">
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>Applied</h3>
+                  <span class="entry-meta">Web Application</span>
+                </div>
+                <p>Full stack job application tracker: React + TypeScript frontend, FastAPI + PostgreSQL API with SQLAlchemy and Alembic migrations, Dockerized. Tracks each application's status history and flags stale ones.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>Nightly Reflections</h3>
+                  <span class="entry-meta">iOS App</span>
+                </div>
+                <p>Designed, built and launched Nightly solo, a privacy focused iOS journaling and sobriety support app. Handled everything myself, including SwiftUI engineering, UX/UI design, local data persistence, and App Store deployment.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>Plant Life</h3>
+                  <span class="entry-meta">iOS App</span>
+                </div>
+                <p>SwiftUI iOS application that gamifies plant care through a virtual currency system, enabling users to earn coins and customize their in-app living space.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>WordList</h3>
+                  <span class="entry-meta">iOS App</span>
+                </div>
+                <p>SwiftUI app for growing your vocabulary in a practical way. Save words you want to use more often, build a personal word list, and get suggestions from it while you write.</p>
+              </li>
+              <li class="entry">
+                <div class="entry-head">
+                  <h3>Enigma</h3>
+                  <span class="entry-meta">Narrative Game</span>
+                </div>
+                <p>Ren’Py horror game with branching storylines and visual storytelling. Decisions in the game change the storyline, and open different characters and minigames.</p>
+              </li>
+          </ul>
         </div>
       </section>
 
       <!-- Coding Section -->
-      <section class="section-padding work-section" id="section_3">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Coding Projects</h2>
-            <p>
-              Selected screenshots from my recent software work, including iOS,
-              web, and data-heavy tools.
-            </p>
-          </div>
-
-          <div class="slideshow-shell">
-            <div class="slideshow-container" id="coding-carousel">
-              <a
-                class="slide-prev"
-                onclick="plusSlides(-1, 'coding'); return false;"
-                >&#10094;</a
-              >
-              <a
-                class="slide-next"
-                onclick="plusSlides(1, 'coding'); return false;"
-                >&#10095;</a
-              >
-            </div>
-            <div class="dots-wrap" id="coding-dots"></div>
-          </div>
+      <section class="section-padding split-section" id="section_4">
+        <div class="container split">
+          <h2 class="split-label">Coding</h2>
+          <div class="split-body" id="coding-grid"></div>
         </div>
       </section>
 
       <!-- Art Section -->
-      <section class="section-padding art-section" id="section_4">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Art &amp; Design</h2>
-            <p>
+      <section class="section-padding split-section" id="section_5">
+        <div class="container split">
+          <h2 class="split-label">Art &amp; Design</h2>
+          <div class="split-body">
+            <p class="section-note">
               Acrylic paintings, magazine layouts, and visual explorations that
               influence how I design interfaces.
             </p>
-          </div>
-
-          <div class="slideshow-shell">
-            <div class="slideshow-container" id="art-carousel">
-              <a
-                class="slide-prev"
-                onclick="plusSlides(-1, 'art'); return false;"
-                >&#10094;</a
-              >
-              <a
-                class="slide-next"
-                onclick="plusSlides(1, 'art'); return false;"
-                >&#10095;</a
-              >
-            </div>
-            <div class="dots-wrap" id="art-dots"></div>
+            <div class="art-grid" id="art-grid"></div>
           </div>
         </div>
       </section>

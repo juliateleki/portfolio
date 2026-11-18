@@ -107,8 +107,65 @@ async function loadProjects() {
 }
 
 function useData(data) {
-  buildCarousel('coding', data.codingProjects || []);
-  buildCarousel('art', data.artProjects || []);
+  buildCodingGrid(data.codingProjects || []);
+  buildArtGrid(data.artProjects || []);
+}
+
+/***** GRIDS *****/
+function buildCodingGrid(projects) {
+  const root = document.getElementById('coding-grid');
+  if (!root) return;
+  const groups = new Map();
+  projects.forEach((p) => {
+    const key = p.name || 'Untitled';
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(p);
+  });
+  groups.forEach((shots, name) => {
+    const first = shots[0];
+    const block = document.createElement('article');
+    block.className = 'shot-group';
+    block.innerHTML = `
+      <div class="shot-group-head">
+        <h3>${name}</h3>
+        ${
+          first.link
+            ? `<a class="text-link" href="${first.link}">${first.linkText || 'View'} →</a>`
+            : ''
+        }
+      </div>
+      <div class="shot-strip">
+        ${shots
+          .map(
+            (s) => `
+          <figure>
+            <a href="${s.img}" target="_blank" rel="noopener">
+              <img src="${s.img}" alt="${name}: ${s.type || ''}" loading="lazy"
+                   onerror="this.onerror=null; this.src='${PLACEHOLDER}'">
+            </a>
+            <figcaption>${s.type || ''}</figcaption>
+          </figure>`
+          )
+          .join('')}
+      </div>`;
+    root.appendChild(block);
+  });
+}
+
+function buildArtGrid(items) {
+  const root = document.getElementById('art-grid');
+  if (!root) return;
+  items.forEach((a) => {
+    const fig = document.createElement('figure');
+    fig.className = 'art-item';
+    fig.innerHTML = `
+      <a href="${a.link || a.img}" target="_blank" rel="noopener">
+        <img src="${a.img}" alt="${a.title || ''}" loading="lazy"
+             onerror="this.onerror=null; this.src='${PLACEHOLDER}'">
+      </a>
+      <figcaption>${(a.title || '').replace(/ Painting$/, '')}</figcaption>`;
+    root.appendChild(fig);
+  });
 }
 
 /***** BUILD CAROUSEL *****/
